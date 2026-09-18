@@ -204,17 +204,20 @@ highlights:
 
 <div align="center">
 
-<img src="metrics/overview.svg" alt="Overview" width="88%"/>
-
-<br/><br/>
-
-<img src="metrics/calendar.svg" alt="Contribution Calendar" width="88%"/>
-
-<br/><br/>
-
-<img src="metrics/languages.svg" alt="Languages" height="220"/>
+<a href="https://github.com/wasifali">
+  <img height="180em" src="https://gh-readme-stats.vercel.app/api?username=wasifali&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00C2FF&icon_color=7B2FFF&text_color=c9d1d9&ring_color=00C2FF&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
+</a>
 &nbsp;
-<img src="metrics/habits.svg" alt="Commit Habits" height="220"/>
+<a href="https://github.com/wasifali">
+  <img height="180em" src="https://gh-readme-stats.vercel.app/api/top-langs/?username=wasifali&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00C2FF&text_color=c9d1d9&langs_count=8" alt="Top Languages"/>
+</a>
+
+<br/><br/>
+
+<!-- STREAK -->
+<a href="https://github.com/wasifali">
+  <img src="https://streak-stats.demolab.com?user=wasifali&theme=tokyonight&hide_border=true&background=0d1117&stroke=00C2FF&ring=00C2FF&fire=FF6B35&currStreakLabel=00C2FF&sideLabels=c9d1d9&dates=555555" alt="Streak Stats"/>
+</a>
 
 </div>
 
