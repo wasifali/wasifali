@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* ─── Theme: Bento Dashboard · orange / black (matches the README palette) ─── */
+@theme {
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --color-bg:        #0a0a0a;
+  --color-surface:   #121212;
+  --color-surface-2: #161616;
+  --color-ink:       #ffffff;
+  --color-muted:     #a3a3a3;
+  --color-dim:       #737373;
+
+  --color-line:        #2a1a12;
+  --color-line-strong: #3a1d10;
+
+  --color-accent: #F97316;
+  --color-peach:  #FDBA74;
+  --color-rust:   #C2410C;
+  --color-ember:  #7C2D12;
+  --color-coal:   #2c1208;
+  --color-soot:   #1a0d07;
+
+  --radius-tile: 24px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection { background: color-mix(in srgb, var(--color-accent) 35%, transparent); }
+
+/* Focus ring that reads on black */
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 6px; }
+
+/* Bento grid primitive: 12 columns, fixed row height on desktop, single column on phones */
+.bento {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 180px;
+}
+@media (max-width: 1023px) {
+  .bento { grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: minmax(160px, auto); }
+}
+@media (max-width: 639px) {
+  .bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .bento > * { grid-column: 1 / -1 !important; grid-row: auto !important; min-height: 140px; }
+  /* image tiles keep a portrait ratio instead of collapsing to one row */
+  .bento > .tile-portrait { aspect-ratio: 4 / 5; min-height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
