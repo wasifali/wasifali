@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="429" height="34" viewBox="0 0 429 34" role="img" aria-label="Ethereum &amp; Solidity: Complete Developer's Guide">
+  <title>Ethereum &amp; Solidity: Complete Developer's Guide</title>
+  <clipPath id="rounded"><rect width="429" height="28" rx="5"/></clipPath>
+  <g transform="translate(0,3)" clip-path="url(#rounded)">
+    <rect width="197" height="28" fill="#0a0a0a"/>
+    <rect x="197" width="232" height="28" fill="#C2410C"/>
+    <path transform="translate(12.0,7.0) scale(0.5833)" fill="#fff" d="M12 0L5.81 3.573v3.574l6.189-3.574 6.191 3.574V3.573zM5.81 10.148v8.144c0 1.85.589 3.243 1.741 4.234S10.177 24 11.973 24s3.269-.482 4.448-1.474c1.179-.991 1.768-2.439 1.768-4.314v-8.064h-3.242v7.85c0 2.036-1.509 3.055-2.948 3.055-1.428 0-2.947-.991-2.947-3.027v-7.878z"/>
+    <g font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" text-rendering="geometricPrecision">
+      <text x="109.0" y="17.6" fill="#fff" textLength="152.0" lengthAdjust="spacing">ETHEREUM &amp; SOLIDITY</text>
+      <text x="313.0" y="17.6" fill="#fff" textLength="208.0" lengthAdjust="spacing">COMPLETE DEVELOPER'S GUIDE</text>
+    </g>
+  </g>
+</svg>

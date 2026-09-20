@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-label="Wasif Ali — Senior Full Stack Developer">
+  <title>Wasif Ali — Senior Full Stack Developer</title>
+  <desc>Editorial hero: large name over a slowly drifting ember aurora, one gradient sweep animation.</desc>
+
+  <defs>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+    </filter>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#ffffff"/>
+      <stop offset="0.5"  stop-color="#FDBA74"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="1"    stop-color="#ffffff"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1200" height="320" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="320" fill="#0a0a0a"/>
+
+    <g filter="url(#blur)" opacity="0.85">
+      <ellipse cx="980" cy="90" rx="260" ry="150" fill="#7C2D12">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -60 30; 0 0" dur="22s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="1120" cy="300" rx="300" ry="120" fill="#F97316" opacity="0.55">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -90 -40; 0 0" dur="27s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="180" cy="330" rx="260" ry="110" fill="#C2410C" opacity="0.7">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 70 -20; 0 0" dur="25s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="620" cy="-40" rx="220" ry="90" fill="#431407">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 40 30; 0 0" dur="30s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <rect width="1200" height="320" filter="url(#grain)" opacity="0.5"/>
+    <rect x="0.5" y="0.5" width="1199" height="319" rx="20" fill="none" stroke="#F97316" stroke-opacity="0.28"/>
+  </g>
+
+  <g font-family="'JetBrains Mono', 'SF Mono', Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" letter-spacing="3.5" fill="#F97316">
+    <text x="72" y="96">SENIOR FULL STACK DEVELOPER</text>
+  </g>
+
+  <text x="68" y="188" font-family="Inter, 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3.5" fill="url(#sweep)">Wasif Ali</text>
+
+  <rect x="72" y="214" width="56" height="2" rx="1" fill="#F97316"/>
+  <text x="72" y="252" font-family="Inter, 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#FDBA74">Node.js · TypeScript · React · microservices doing 200K requests a day, still under 600 ms.</text>
+
+  <g transform="translate(866, 72)" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+    <rect x="0" y="0" width="262" height="34" rx="17" fill="#0a0a0a" fill-opacity="0.55" stroke="#F97316" stroke-opacity="0.45"/>
+    <circle cx="20" cy="17" r="4.5" fill="#F97316">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="17" r="4.5" fill="none" stroke="#F97316" stroke-width="1.5">
+      <animate attributeName="r" values="4.5;11" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="36" y="22" font-size="13" font-weight="600" fill="#ffffff" letter-spacing="0.2">Open to Senior / Lead / Staff roles</text>
+  </g>
+
+  <text x="1128" y="256" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="12" letter-spacing="2" fill="#FDBA74" fill-opacity="0.8">LAHORE · REMOTE · UTC+5</text>
+</svg>

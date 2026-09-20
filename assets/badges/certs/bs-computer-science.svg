@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="429" height="34" viewBox="0 0 429 34" role="img" aria-label="BS Computer Science: PUCIT · 2012–2016">
+  <title>BS Computer Science: PUCIT · 2012–2016</title>
+  <clipPath id="rounded"><rect width="429" height="28" rx="5"/></clipPath>
+  <g transform="translate(0,3)" clip-path="url(#rounded)">
+    <rect width="197" height="28" fill="#0a0a0a"/>
+    <rect x="197" width="232" height="28" fill="#7C2D12"/>
+    <path transform="translate(12.0,7.0) scale(0.5833)" fill="#fff" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+    <g font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" text-rendering="geometricPrecision">
+      <text x="109.0" y="17.6" fill="#fff" textLength="152.0" lengthAdjust="spacing">BS COMPUTER SCIENCE</text>
+      <text x="313.0" y="17.6" fill="#fff" textLength="136.0" lengthAdjust="spacing">PUCIT · 2012–2016</text>
+    </g>
+  </g>
+</svg>

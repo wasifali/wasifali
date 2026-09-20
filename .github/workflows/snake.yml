@@ -1,5 +1,7 @@
-name: Generate Snake
+name: Generate profile assets
 
+# Regenerates the contribution snake and the self-hosted stats cards (streak + activity)
+# and publishes them to the `output` branch, which the README embeds via raw URLs.
 on:
   schedule:
     - cron: "0 */12 * * *"
@@ -13,11 +15,23 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate stats cards (streak + activity)
+        # Runs BEFORE the snake action (which runs in Docker as root and leaves dist/ root-owned).
+        # Private contributions are included only if "Private contributions" is enabled on the profile.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_LOGIN: ${{ github.repository_owner }}
+        run: python scripts/build-stats.py dist
+
       - name: Generate snake animation
         uses: Platane/snk@v3
-        id: snake-gif
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
