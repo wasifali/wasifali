@@ -31,7 +31,18 @@ email provider instead, replace `handleSubmit` in `components/contact-form.tsx` 
 | `app/globals.css` | Theme tokens and the `.bento` grid |
 | `public/portrait.jpg` | 4:5 portrait used on Home and About |
 | `public/portrait-square.jpg` | Square crop used for Open Graph / social cards |
-| `public/resume/` | Drop `Wasif-Ali-Resume.pdf` here; the résumé buttons already point to it |
+| `app/resume/page.tsx` | Printable HTML résumé rendered from `content.ts`; `/resume` on the live site |
+| `public/resume/Wasif-Ali-Resume.pdf` | Generated from `/resume` with `npm run resume:pdf` (headless Chrome). Regenerate after content edits |
+| `app/[...rest]/page.tsx` | Catch-all: unknown routes redirect to `/` |
+
+## Regenerating the résumé PDF
+
+```bash
+npm run dev                  # or npm start after a build
+RESUME_URL=http://127.0.0.1:3000/resume npm run resume:pdf
+```
+
+Uses Chrome or Brave if found; set `CHROME_PATH` otherwise. Commit the regenerated PDF.
 
 ## Adding a case study
 

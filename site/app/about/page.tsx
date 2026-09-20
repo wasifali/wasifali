@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bento">
-      <Tile cols={4} rows={3} className="tile-portrait p-0" ariaLabel="Portrait of Wasif Ali">
+      <Tile cols={4} rows={3} className="tile-portrait overflow-hidden p-0" ariaLabel="Portrait of Wasif Ali">
         <Image src="/portrait.jpg" alt={`${SITE.name}, portrait`} fill priority sizes="(max-width: 1024px) 100vw, 400px" className="object-cover object-top" />
         <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,10,0.8),transparent_50%)]" aria-hidden />
         <div className="absolute bottom-6 left-6 flex flex-col gap-1">

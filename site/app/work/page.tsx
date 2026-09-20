@@ -26,7 +26,7 @@ export default function WorkPage() {
             <span>0{i + 1} · {cs.tag}</span>
             <span>{cs.period}</span>
           </div>
-          <div className="h-[150px] rounded-2xl border border-line-strong" style={{ background: cs.art }} aria-hidden />
+          <div className="tile-art h-[150px] rounded-2xl border border-line-strong" style={{ background: cs.art }} aria-hidden />
           <div className="flex flex-col gap-2">
             <span className="text-[28px] font-bold leading-tight tracking-[-0.03em]">{cs.title}</span>
             <span className="text-[15px] leading-snug text-muted">{cs.summary}</span>

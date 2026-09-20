@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import { Eyebrow, Pills, Stat, Tile } from "@/components/tile";
 import { CASE_STUDIES } from "@/lib/content";
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 export default async function CaseStudyPage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
   const index = CASE_STUDIES.findIndex((c) => c.slug === slug);
-  if (index === -1) notFound();
+  if (index === -1) redirect("/");
   const cs = CASE_STUDIES[index];
   const next = CASE_STUDIES[(index + 1) % CASE_STUDIES.length];
 

@@ -32,9 +32,9 @@ interface TileProps {
 
 export function Tile({ cols = 4, rows = 1, tone = "surface", href, className, style, children, as = "div", ariaLabel }: TileProps) {
   const base = cn(
-    "relative box-border flex flex-col rounded-tile p-6 md:p-7 transition-transform duration-200 overflow-hidden",
+    "relative box-border flex flex-col rounded-tile p-6 md:p-7",
     TONES[tone],
-    href && "hover:-translate-y-0.5 hover:border-accent/60 focus-visible:-translate-y-0.5",
+    href && "tile-link hover:border-accent/60",
     className,
   );
   const gridStyle: CSSProperties = { gridColumn: `span ${cols}`, gridRow: `span ${rows}`, ...style };

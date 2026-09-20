@@ -23,7 +23,7 @@ export default function HomePage() {
       </Tile>
 
       {/* Portrait */}
-      <Tile cols={2} rows={2} className="tile-portrait p-0" ariaLabel="Portrait of Wasif Ali">
+      <Tile cols={2} rows={2} className="tile-portrait overflow-hidden p-0" ariaLabel="Portrait of Wasif Ali">
         <Image
           src="/portrait.jpg"
           alt={`${SITE.name}, portrait`}
@@ -55,7 +55,7 @@ export default function HomePage() {
           <span>01 · {featured.tag}</span>
           <span>{featured.metrics[0].value}</span>
         </div>
-        <div className="h-[140px] rounded-2xl border border-line-strong" style={{ background: featured.art }} aria-hidden />
+        <div className="tile-art h-[140px] rounded-2xl border border-line-strong" style={{ background: featured.art }} aria-hidden />
         <div className="flex flex-col gap-2">
           <span className="text-[26px] font-bold leading-tight tracking-[-0.03em]">{featured.title}</span>
           <span className="text-[15px] leading-snug text-muted">52 microservices. Redis caching took average latency from 1500 ms to 600 ms.</span>
@@ -67,7 +67,7 @@ export default function HomePage() {
           <span>02 · {second.tag}</span>
           <span>{second.metrics[1].value} tx</span>
         </div>
-        <div className="h-[140px] rounded-2xl border border-line-strong" style={{ background: second.art }} aria-hidden />
+        <div className="tile-art h-[140px] rounded-2xl border border-line-strong" style={{ background: second.art }} aria-hidden />
         <div className="flex flex-col gap-2">
           <span className="text-[26px] font-bold leading-tight tracking-[-0.03em]">{second.title}</span>
           <span className="text-[15px] leading-snug text-muted">{second.metrics[0].value} users. Wallet auth, gas-optimised contracts, page load down 75%.</span>
