@@ -58,6 +58,7 @@ role: Senior Full Stack Developer
 experience: 10 years
 
 companies:
+  - Ibanera                # 2025 – 2026 (remote)
   - Big Immersive          # 2021 – 2026
   - CreativeMorph          # 2019 – 2021
   - Novatore Solutions     # 2016 – 2019
@@ -241,6 +242,24 @@ Developed the payment integrations and CMS backends, built the real-time layer, 
 ---
 
 ## Experience
+
+### **Full Stack Engineer** | [Ibanera](https://www.linkedin.com/company/ibanera-llc/)
+*Jan 2025 – Apr 2026 · Full-time · Remote*
+
+Full-stack product engineering for a fintech platform, split between React front ends and Go / Node.js backend services.
+
+- Designed, developed, and maintained scalable web applications with React on the front end and Node.js and Go services behind them.
+- Architected and implemented RESTful and event-driven APIs with a focus on performance, reliability, and security.
+- Built and optimized high-throughput, low-latency backend services in Go, and feature-rich application services in Node.js.
+- Worked closely with product managers, designers, and business stakeholders to turn requirements into effective technical solutions.
+- Kept code quality high through clean architecture, code reviews, testing, and engineering best practices.
+- Optimized application performance, scalability, and data access across the full stack.
+- Integrated third-party services, authentication mechanisms, and external APIs.
+- Led technical discussions, mentored junior developers, and contributed to architecture and technology decisions.
+
+`React` `Node.js` `Go` `TypeScript` `REST APIs` `Event-Driven APIs` `Microservices` `Authentication`
+
+---
 
 ### **Senior Full Stack Developer** | Big Immersive
 *2021 – Present · Full-time · Lahore, Pakistan*
