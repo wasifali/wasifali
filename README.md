@@ -50,39 +50,11 @@
 
 ## 🧑‍💻 About Me
 
-```yaml
-name: Wasif Ali
-handle: "@wasifali"
-location: "Lahore, Pakistan 🇵🇰 (Open to Remote 🌍)"
-role: Senior Full Stack Developer
-experience: 10 years
-
-companies:
-  - Ibanera                # 2025 – 2026 (remote)
-  - Big Immersive          # 2021 – 2026
-  - CreativeMorph          # 2019 – 2021
-  - Novatore Solutions     # 2016 – 2019
-
-focus:
-  - "Production Node.js / TypeScript Backends"
-  - "Microservices & Scalable REST APIs"
-  - "React & Angular Front-End Architecture"
-  - "Blockchain / Web3 Integrations"
-  - "Performance Engineering & Caching"
-
-highlights:
-  - "🚗 ERP microservices for BMW Mini & Motorrad — 200K req/day across 52 services"
-  - "🛒 Consumer marketplace — 50K+ users, 1M+ transactions"
-  - "⚡️ API response time cut 60% (1500ms → 600ms) via Redis caching"
-  - "🧑‍🏫 Mentored 15+ engineers across US & Europe client teams"
-
-Open to:
-  - "🔭 Full-Stack / Backend / Senior / Lead / Staff Engineer roles"
-  - "🛜 Distributed product teams"
-  - "⚡️ Enterprise platform work"
-  - "⏱️ US / EU timezone overlap"
-  - "🚗 Remote-first or relocation for the right team"
-```
+<!-- Rendered as an SVG (scripts/build-yaml-cards.py) so the YAML uses the README palette
+     instead of GitHub's fixed syntax-highlighting colours. Edit the text in the script. -->
+<div align="center">
+  <img src="./assets/about.svg" alt="About Wasif Ali: Senior Full Stack Developer, 10 years, Lahore (open to remote); companies, focus areas, highlights and roles open to" width="880"/>
+</div>
 
 ---
 
@@ -384,27 +356,9 @@ Built payment and CMS platforms for consumer health products, and brought deploy
 
 ## Current Focus
 
-```yaml
-building:
-  - High-throughput Node.js microservices with predictable p95 latency
-  - Redis caching strategies that survive cold starts and cache stampedes
-  - Wallet and smart-contract flows legible to non-crypto users
-
-refining:
-  - NestJS + TypeScript service architecture as a reusable baseline
-  - Observability with Datadog and Coralogix across distributed services
-  - Gas-efficient Solidity patterns for ERC-721 / ERC-1155
-
-leading:
-  - Peer code review programs that measurably cut post-release defects
-  - Mentorship for engineers joining distributed, cross-timezone teams
-
-open_to:
-  - Senior / Lead / Staff Full-Stack and Backend roles
-  - Distributed product teams with US / EU timezone overlap
-  - Enterprise platform and high-throughput backend work
-  - Fully remote or relocation for the right team
-```
+<div align="center">
+  <img src="./assets/focus.svg" alt="Current focus: building, refining, leading, and roles open to" width="880"/>
+</div>
 
 ---
 

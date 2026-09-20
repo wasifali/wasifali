@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="525" viewBox="0 0 880 525" role="img" aria-label="focus.yaml">
+  <title>focus.yaml</title>
+  <style>text { font-family: 'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', monospace; font-size: 14px; white-space: pre; }</style>
+  <rect x="0.5" y="0.5" width="879" height="524" rx="12" fill="#0a0a0a" stroke="#7C2D12"/>
+  <path d="M0.5 12.5 a12 12 0 0 1 12 -12 h855 a12 12 0 0 1 12 12 v27.5 h-879 z" fill="#141414"/>
+  <line x1="0.5" y1="40" x2="879.5" y2="40" stroke="#7C2D12" stroke-opacity="0.6"/>
+  <circle cx="22" cy="20.5" r="5.5" fill="#F97316" opacity="0.9"/>
+  <circle cx="40" cy="20.5" r="5.5" fill="#F97316" opacity="0.55"/>
+  <circle cx="58" cy="20.5" r="5.5" fill="#F97316" opacity="0.3"/>
+  <text x="440.0" y="25" text-anchor="middle" fill="#8B8B8B" style="font-size:12.5px">focus.yaml</text>
+  <g>
+    <text x="28" y="76" xml:space="preserve"><tspan fill="#f5f5f5"></tspan><tspan fill="#F97316" font-weight="600">building</tspan><tspan fill="#f5f5f5">:</tspan></text>
+    <text x="28" y="99" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">High-throughput Node.js microservices with predictable p95 latency</tspan></text>
+    <text x="28" y="122" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Redis caching strategies that survive cold starts and cache stampedes</tspan></text>
+    <text x="28" y="145" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Wallet and smart-contract flows legible to non-crypto users</tspan></text>
+    <text x="28" y="168" xml:space="preserve"> </text>
+    <text x="28" y="191" xml:space="preserve"><tspan fill="#f5f5f5"></tspan><tspan fill="#F97316" font-weight="600">refining</tspan><tspan fill="#f5f5f5">:</tspan></text>
+    <text x="28" y="214" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">NestJS + TypeScript service architecture as a reusable baseline</tspan></text>
+    <text x="28" y="237" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Observability with Datadog and Coralogix across distributed services</tspan></text>
+    <text x="28" y="260" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Gas-efficient Solidity patterns for ERC-721 / ERC-1155</tspan></text>
+    <text x="28" y="283" xml:space="preserve"> </text>
+    <text x="28" y="306" xml:space="preserve"><tspan fill="#f5f5f5"></tspan><tspan fill="#F97316" font-weight="600">leading</tspan><tspan fill="#f5f5f5">:</tspan></text>
+    <text x="28" y="329" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Peer code review programs that measurably cut post-release defects</tspan></text>
+    <text x="28" y="352" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Mentorship for engineers joining distributed, cross-timezone teams</tspan></text>
+    <text x="28" y="375" xml:space="preserve"> </text>
+    <text x="28" y="398" xml:space="preserve"><tspan fill="#f5f5f5"></tspan><tspan fill="#F97316" font-weight="600">open_to</tspan><tspan fill="#f5f5f5">:</tspan></text>
+    <text x="28" y="421" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Senior / Lead / Staff Full-Stack and Backend roles</tspan></text>
+    <text x="28" y="444" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Distributed product teams with US / EU timezone overlap</tspan></text>
+    <text x="28" y="467" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Enterprise platform and high-throughput backend work</tspan></text>
+    <text x="28" y="490" xml:space="preserve"><tspan fill="#f5f5f5">  </tspan><tspan fill="#C2410C" font-weight="600">- </tspan><tspan fill="#f5f5f5">Fully remote or relocation for the right team</tspan></text>
+  </g>
+</svg>
