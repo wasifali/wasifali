@@ -35,14 +35,17 @@ SETS = {
     "": [  # README header: about | connect columns -> assets/badges/*.svg
         ("education",    "BS Computer Science", "PUCIT Lahore",         "#7C2D12", None),
         ("class",        "Class of",            "2016",                 "#C2410C", None),
+        ("experience",   "Experience",          "10 Years",             "#EA580C", None),
         ("location",     "Based in",            "Lahore, Pakistan",     "#F97316", "googlemaps"),
         ("availability", "Open to",             "Remote / Relocation",  "#FDBA74", None),
-        ("linkedin",     "LinkedIn",            "Connect",              "#7C2D12", "linkedin-glyph"),
-        ("email",        "Email",               "Reach Out",            "#C2410C", "gmail"),
+        ("portfolio",    "Portfolio",           "wasifali.vercel.app",  "#7C2D12", "vercel"),
+        ("linkedin",     "LinkedIn",            "Connect",              "#C2410C", "linkedin-glyph"),
+        ("email",        "Email",               "Reach Out",            "#EA580C", "gmail"),
         ("github",       "GitHub",              "Follow",               "#F97316", "github"),
         ("phone",        "Phone",               "+92 321-3555-225",     "#FDBA74", "whatsapp"),
     ],
-    "connect": [  # Connect section: 2x2 grid -> assets/badges/connect/*.svg
+    "connect": [  # Connect section: portfolio row + 2x2 grid -> assets/badges/connect/*.svg
+        ("portfolio", "Portfolio", "wasifali.vercel.app", "#F97316", "vercel"),
         ("gmail",    "Gmail",    "wasifale@gmail.com", "#7C2D12", "gmail"),
         ("linkedin", "LinkedIn", "in/wasifali1",       "#C2410C", "linkedin-glyph"),
         ("github",   "GitHub",   "wasifali",           "#F97316", "github"),
@@ -122,7 +125,8 @@ def main() -> None:
         print(f"[{folder or 'header'}] label {label_w}px + bar {msg_w}px = {label_w + msg_w}px per badge")
         for slug, label, message, color, icon in badges:
             svg = build(slug, label, message, color, icon, label_w, msg_w)
-            (out / f"{slug}.svg").write_text(svg, encoding="utf-8", newline="\n")
+            with open(out / f"{slug}.svg", "w", encoding="utf-8", newline="\n") as fh:
+                fh.write(svg)
             print(f"  wrote {(out / slug).relative_to(ROOT).as_posix()}.svg")
 
 

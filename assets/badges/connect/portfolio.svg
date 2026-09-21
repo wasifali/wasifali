@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="293" height="34" viewBox="0 0 293 34" role="img" aria-label="Portfolio: wasifali.vercel.app">
+  <title>Portfolio: wasifali.vercel.app</title>
+  <clipPath id="rounded"><rect width="293" height="28" rx="5"/></clipPath>
+  <g transform="translate(0,3)" clip-path="url(#rounded)">
+    <rect width="117" height="28" fill="#0a0a0a"/>
+    <rect x="117" width="176" height="28" fill="#F97316"/>
+    <path transform="translate(12.0,7.0) scale(0.5833)" fill="#fff" d="M24 22.525H0l12-21.05 12 21.05z"/>
+    <g font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" text-rendering="geometricPrecision">
+      <text x="69.0" y="17.6" fill="#fff" textLength="72.0" lengthAdjust="spacing">PORTFOLIO</text>
+      <text x="205.0" y="17.6" fill="#fff" textLength="152.0" lengthAdjust="spacing">WASIFALI.VERCEL.APP</text>
+    </g>
+  </g>
+</svg>

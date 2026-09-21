@@ -22,10 +22,12 @@
     <td align="left" valign="top">
       <img src="./assets/badges/education.svg" alt="BS Computer Science, PUCIT Lahore"/><br/>
       <img src="./assets/badges/class.svg" alt="Class of 2016"/><br/>
+      <img src="./assets/badges/experience.svg" alt="10 years of experience"/><br/>
       <img src="./assets/badges/location.svg" alt="Based in Lahore, Pakistan"/><br/>
       <img src="./assets/badges/availability.svg" alt="Open to remote or relocation"/>
     </td>
     <td align="left" valign="top">
+      <a href="https://wasifali.vercel.app/"><img src="./assets/badges/portfolio.svg" alt="Portfolio: wasifali.vercel.app"/></a><br/>
       <a href="https://www.linkedin.com/in/wasifali1"><img src="./assets/badges/linkedin.svg" alt="LinkedIn"/></a><br/>
       <a href="mailto:wasifale@gmail.com"><img src="./assets/badges/email.svg" alt="Email"/></a><br/>
       <a href="https://github.com/wasifali"><img src="./assets/badges/github.svg" alt="GitHub"/></a><br/>
@@ -364,8 +366,11 @@ Built payment and CMS platforms for consumer health products, and brought deploy
 
 ## Connect
 
-<!-- Fixed-width badges (scripts/build-badges.py, set "connect") in a 2x2 grid. -->
+<!-- Fixed-width badges (scripts/build-badges.py, set "connect"): portfolio row, then a 2x2 grid. -->
 <table align="center">
+  <tr>
+    <td align="center" colspan="2"><a href="https://wasifali.vercel.app/"><img src="./assets/badges/connect/portfolio.svg" alt="Portfolio: wasifali.vercel.app"/></a></td>
+  </tr>
   <tr>
     <td align="center"><a href="mailto:wasifale@gmail.com"><img src="./assets/badges/connect/gmail.svg" alt="Gmail: wasifale@gmail.com"/></a></td>
     <td align="center"><a href="https://www.linkedin.com/in/wasifali1"><img src="./assets/badges/connect/linkedin.svg" alt="LinkedIn: in/wasifali1"/></a></td>
