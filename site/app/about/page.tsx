@@ -35,10 +35,22 @@ export default function AboutPage() {
         <span className="text-[17px] font-semibold leading-snug">{EDUCATION.degree} · {EDUCATION.school} · {EDUCATION.years}</span>
       </Tile>
 
-      <Tile cols={4} as="section" className="justify-between">
-        <Eyebrow tone="peach">Certified</Eyebrow>
-        <span className="text-[16px] font-semibold leading-snug">{CERTIFICATIONS.map((c) => c.title.split(":")[0]).join(" · ")} · {CERTIFICATIONS[0].issuer}</span>
-        <span className="text-[13px] leading-snug text-muted">{CERTIFICATIONS.map((c) => c.title).join(" · ")}</span>
+      <Tile cols={4} as="section" className="justify-between gap-3">
+        <Eyebrow tone="peach">Certified · {CERTIFICATIONS.length}</Eyebrow>
+        <ul className="m-0 flex list-none flex-col divide-y divide-line p-0">
+          {CERTIFICATIONS.map((c, i) => {
+            const [name, subtitle] = c.title.split(": ");
+            return (
+              <li key={c.title} className="flex gap-3 py-2.5 first:pt-0 last:pb-0">
+                <span className="font-mono text-[12px] leading-[1.6] text-accent">{String(i + 1).padStart(2, "0")}</span>
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[15px] font-semibold leading-snug">{name}</span>
+                  <span className="text-[12px] leading-snug text-muted">{subtitle} · {c.issuer}</span>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </Tile>
 
       {PRINCIPLES.map((p, i) => (

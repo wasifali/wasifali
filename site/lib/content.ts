@@ -234,6 +234,7 @@ export const CASE_STUDIES: CaseStudy[] = [
 ];
 
 export interface Role {
+  slug: string;
   period: string;
   title: string;
   company: string;
@@ -246,6 +247,7 @@ export interface Role {
 
 export const EXPERIENCE: Role[] = [
   {
+    slug: "ibanera",
     period: "Jan 2025 — Apr 2026",
     title: "Full Stack Engineer (Contract)",
     company: "Ibanera",
@@ -264,6 +266,7 @@ export const EXPERIENCE: Role[] = [
     tags: ["React", "Go", "TypeScript", "Event-driven APIs", "REST"],
   },
   {
+    slug: "big-immersive",
     period: "2021 — Dec 2025",
     title: "Engineering Lead / Senior Full Stack Developer",
     company: "Big Immersive",
@@ -282,6 +285,7 @@ export const EXPERIENCE: Role[] = [
     tags: ["Node.js", "TypeScript", "NestJS", "PostgreSQL", "Redis", "AWS Lambda", "Solidity"],
   },
   {
+    slug: "creativemorph",
     period: "2019 — 2021",
     title: "Team Lead / Senior JavaScript Engineer",
     company: "CreativeMorph",
@@ -289,16 +293,18 @@ export const EXPERIENCE: Role[] = [
     summary:
       "Led a 5-person team delivering for three Silicon Valley startup clients, and authored the NestJS reference architecture the agency standardised on.",
     bullets: [
-      "Led a 5-person team, 2 frontend, 2 backend and 1 QA engineer, coordinating implementation and delivery for 3 Silicon Valley startup clients on aggressive release cycles.",
-      "Designed a NestJS + TypeScript reference architecture adopted as the standard across 20+ client projects.",
-      "Built an OCR-based image annotation platform and admin dashboards (MERN stack) processing 1000+ images/month for 100+ clients.",
-      "Delivered Microsoft Teams messaging extensions and modular dashboard UIs adopted by 10K+ end users.",
-      "Drove a legacy refactoring effort that lifted test coverage by 20%; worked hands-on with PostgreSQL, queues and JWT authentication in production.",
-      "Automated cross-tool workflows via custom webhooks for Slack, Trello, JIRA and GitHub, saving the team 10+ hours/week.",
+      "Led a 5-person team of 2 frontend, 2 backend and 1 QA engineer, coordinating implementation and delivering full-stack web applications for 3 Silicon Valley startups on aggressive release cycles.",
+      "Designed a reusable NestJS + TypeScript reference architecture adopted as the standard across 20+ client projects, improving development consistency and scalability.",
+      "Built an OCR-powered image annotation platform and scalable admin dashboards on the MERN stack, processing 1000+ images/month for 100+ clients.",
+      "Developed Microsoft Teams messaging extensions and modular dashboard interfaces adopted by 10K+ end users.",
+      "Refactored legacy codebases and strengthened automated testing, lifting test coverage by 20%; worked hands-on with PostgreSQL, queues and JWT authentication in production.",
+      "Automated workflows across Slack, Trello, JIRA and GitHub with custom webhooks, saving the team 10+ engineering hours per week.",
+      "Recognised with the company-wide Performance Award twice in one year for engineering impact and delivery.",
     ],
     tags: ["NestJS", "TypeScript", "React", "MongoDB", "PostgreSQL", "Webhooks"],
   },
   {
+    slug: "novatore-solutions",
     period: "2016 — 2019",
     title: "Software Engineer",
     company: "Novatore Solutions",
@@ -306,10 +312,10 @@ export const EXPERIENCE: Role[] = [
     summary:
       "Payment and CMS platforms for consumer health products serving 100K+ users, plus the deployment automation and internal training that made releases routine.",
     bullets: [
-      "Designed and led internal training on Angular and DevOps practices for 5 engineers.",
-      "Developed payment gateway integrations and CMS platforms for applications serving 100K+ users, with PostgreSQL, queues, JWT authentication and AWS-based deployment workflows.",
-      "Built Angular front-end architecture with real-time WebSocket features.",
-      "Automated production deployments with AWS and Jenkins, reducing release time from hours to minutes.",
+      "Developed payment gateway integrations and CMS platforms for fitness and health applications serving 100K+ users, built on PostgreSQL, queues and JWT authentication.",
+      "Architected and developed Angular front-end applications with real-time communication over WebSockets.",
+      "Automated CI/CD deployments with AWS and Jenkins, reducing production release cycles from hours to minutes.",
+      "Designed and led internal technical training on Angular and DevOps practices, mentoring and upskilling a team of 5 engineers.",
     ],
     tags: ["Angular", "Node.js", "PostgreSQL", "WebSockets", "AWS", "Jenkins"],
   },

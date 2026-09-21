@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { CASE_STUDIES, SITE } from "@/lib/content";
+import { CASE_STUDIES, EXPERIENCE, SITE } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -15,5 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly" as const,
     priority: 0.6,
   }));
-  return [...routes, ...studies];
+  const roles = EXPERIENCE.map((r) => ({
+    url: `${SITE.url}/experience/${r.slug}`,
+    lastModified: now,
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
+  return [...routes, ...studies, ...roles];
 }
