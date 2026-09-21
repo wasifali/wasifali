@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: `${SITE.name} — ${SITE.role}`, template: `%s | ${SITE.name}` },
   description: SITE.tagline,
-  keywords: ["Senior Full Stack Developer", "Node.js", "TypeScript", "NestJS", "React", "Angular", "Microservices", "Redis", "Web3", "Lahore", "Remote"],
+  keywords: ["Engineering Lead", "Team Lead", "Software Architect", "Senior Full Stack Developer", "Node.js", "TypeScript", "Go", "NestJS", "React", "PostgreSQL", "Microservices", "Redis", "AWS", "Web3", "Lahore", "Remote"],
   authors: [{ name: SITE.name, url: SITE.url }],
   openGraph: {
     type: "website",
@@ -36,7 +36,7 @@ const jsonLd = {
   email: `mailto:${SITE.email}`,
   address: { "@type": "PostalAddress", addressLocality: "Lahore", addressCountry: "PK" },
   sameAs: [SITE.linkedin, SITE.github],
-  knowsAbout: ["Node.js", "TypeScript", "NestJS", "React", "Angular", "MongoDB", "Redis", "Microservices", "Solidity", "AWS"],
+  knowsAbout: ["Engineering leadership", "Node.js", "TypeScript", "Go", "NestJS", "React", "Angular", "PostgreSQL", "MongoDB", "Redis", "Microservices", "Solidity", "AWS", "AWS Lambda"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

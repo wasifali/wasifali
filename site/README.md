@@ -31,8 +31,8 @@ email provider instead, replace `handleSubmit` in `components/contact-form.tsx` 
 | `app/globals.css` | Theme tokens and the `.bento` grid |
 | `public/portrait.jpg` | 4:5 portrait used on Home and About |
 | `public/portrait-square.jpg` | Square crop used for Open Graph / social cards |
-| `app/resume/page.tsx` | Printable HTML résumé rendered from `content.ts`; `/resume` on the live site |
-| `public/resume/Wasif-Ali-Resume.pdf` | Generated from `/resume` with `npm run resume:pdf` (headless Chrome). Regenerate after content edits |
+| `app/resume/page.tsx` | Printable HTML mirror of the PDF résumé, rendered from `content.ts`; `/resume` on the live site |
+| `public/resume/Wasif-Ali-Resume.pdf` | The canonical résumé. `lib/content.ts` and `/resume` mirror it; when the PDF changes, update `content.ts` to match (or regenerate the PDF from `/resume` with `npm run resume:pdf`) |
 | `app/[...rest]/page.tsx` | Catch-all: unknown routes redirect to `/` |
 
 ## Regenerating the résumé PDF
