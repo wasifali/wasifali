@@ -19,8 +19,14 @@ const TONES: Record<TileTone, string> = {
 };
 
 interface TileProps {
+  /** Columns spanned on the 12-column desktop grid (≥1024px). */
   cols?: number;
+  /** Rows spanned on desktop. */
   rows?: number;
+  /** Columns spanned on the 6-column tablet grid (640–1023px). Defaults to full width for wide tiles, half width otherwise. */
+  md?: number;
+  /** Rows spanned on tablet. Defaults to `rows`. */
+  mdRows?: number;
   tone?: TileTone;
   href?: string;
   className?: string;
@@ -30,14 +36,21 @@ interface TileProps {
   ariaLabel?: string;
 }
 
-export function Tile({ cols = 4, rows = 1, tone = "surface", href, className, style, children, as = "div", ariaLabel }: TileProps) {
+export function Tile({ cols = 4, rows = 1, md, mdRows, tone = "surface", href, className, style, children, as = "div", ariaLabel }: TileProps) {
   const base = cn(
     "relative box-border flex flex-col rounded-tile p-6 md:p-7",
     TONES[tone],
     href && "tile-link hover:border-accent/60",
     className,
   );
-  const gridStyle: CSSProperties = { gridColumn: `span ${cols}`, gridRow: `span ${rows}`, ...style };
+  // Spans are applied by .bento in globals.css per breakpoint; phones collapse to one column.
+  const gridStyle = {
+    "--cols": cols,
+    "--rows": rows,
+    "--cols-md": md ?? (cols >= 7 ? 6 : 3),
+    "--rows-md": mdRows ?? rows,
+    ...style,
+  } as CSSProperties;
 
   if (href) {
     const external = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");

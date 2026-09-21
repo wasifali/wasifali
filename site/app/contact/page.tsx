@@ -5,26 +5,26 @@ import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Senior, Lead or Staff roles on distributed teams with US or EU overlap. Replies within a day.",
+  description: "Engineering Lead, Staff or Engineering Manager roles on distributed teams with US or EU overlap. Replies within a day.",
 };
 
 export default function ContactPage() {
   return (
     <div className="bento">
-      <Tile cols={7} rows={2} tone="hero" as="section" className="justify-between p-8 md:p-10">
+      <Tile cols={7} rows={2} mdRows={1} tone="hero" as="section" className="justify-between gap-6 p-6 sm:p-8 md:p-10">
         <div className="flex items-center gap-2.5">
           <Dot />
           <Eyebrow>Contact · replies within a day · {SITE.timezone}</Eyebrow>
         </div>
         <div className="flex flex-col gap-3">
-          <h1 className="text-[36px] font-bold leading-[1] tracking-[-0.035em] md:text-[54px]">Let&apos;s talk about your backend.</h1>
+          <h1 className="text-[clamp(32px,7vw,54px)] font-bold leading-[1] tracking-[-0.035em]">Let&apos;s talk about your team.</h1>
           <p className="text-[16px] leading-relaxed text-muted md:text-[17px]">
-            {SITE.availableFor} on distributed product teams with US or EU overlap. Enterprise platforms, high-throughput services, Web3 integrations.
+            {SITE.availableFor} on distributed product teams with US or EU overlap. Enterprise platforms, high-throughput services, teams of five to seven that need one accountable owner.
           </p>
         </div>
       </Tile>
 
-      <Tile cols={5} rows={4} as="section" className="gap-4" ariaLabel="Contact form">
+      <Tile cols={5} rows={4} md={6} mdRows={1} as="section" className="gap-4" ariaLabel="Contact form">
         <Eyebrow>Message</Eyebrow>
         <ContactForm />
       </Tile>
@@ -34,15 +34,15 @@ export default function ContactPage() {
         <span className="text-[24px] font-bold leading-tight tracking-[-0.02em] break-all md:text-[26px]">{SITE.email}</span>
       </Tile>
 
-      <Tile cols={2} href={SITE.linkedin} className="justify-between p-5" ariaLabel="LinkedIn profile">
+      <Tile cols={2} md={2} href={SITE.linkedin} className="justify-between p-5" ariaLabel="LinkedIn profile">
         <Eyebrow tone="peach">LinkedIn</Eyebrow>
         <span className="text-[15px] font-semibold">in/wasifali1</span>
       </Tile>
-      <Tile cols={2} href={SITE.github} className="justify-between p-5" ariaLabel="GitHub profile">
+      <Tile cols={2} md={2} href={SITE.github} className="justify-between p-5" ariaLabel="GitHub profile">
         <Eyebrow tone="peach">GitHub</Eyebrow>
         <span className="text-[15px] font-semibold">{SITE.handle}</span>
       </Tile>
-      <Tile cols={3} href={SITE.whatsapp} className="justify-between p-5" ariaLabel="WhatsApp">
+      <Tile cols={3} md={2} href={SITE.whatsapp} className="justify-between p-5" ariaLabel="WhatsApp">
         <Eyebrow tone="peach">WhatsApp</Eyebrow>
         <span className="text-[15px] font-semibold">{SITE.phoneDisplay}</span>
       </Tile>

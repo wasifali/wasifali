@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Dot, Eyebrow, Pills, Stat, Tile } from "@/components/tile";
 import { CASE_STUDIES, EXPERIENCE, SITE, STACK, STATS } from "@/lib/content";
 
+const mentored = STATS.find((s) => s.label === "engineers mentored") ?? STATS[STATS.length - 1];
+const teamLed = STATS.find((s) => s.label.startsWith("engineers led")) ?? STATS[2];
+
 export default function HomePage() {
   const [featured, second, third] = CASE_STUDIES;
   const latest = EXPERIENCE[0];
@@ -9,13 +12,13 @@ export default function HomePage() {
   return (
     <div className="bento">
       {/* Hero */}
-      <Tile cols={7} rows={2} tone="hero" as="section" className="justify-between p-8 md:p-10" ariaLabel="Introduction">
+      <Tile cols={7} rows={2} tone="hero" as="section" className="justify-between p-6 sm:p-8 md:p-10" ariaLabel="Introduction">
         <div className="flex items-center gap-2.5">
           <Dot />
           <Eyebrow>Available · {SITE.availableFor}</Eyebrow>
         </div>
         <div className="flex flex-col gap-4">
-          <h1 className="text-[44px] font-bold leading-[1] tracking-[-0.04em] md:text-[64px]">{SITE.name}</h1>
+          <h1 className="text-[clamp(40px,9vw,64px)] font-bold leading-[1] tracking-[-0.04em]">{SITE.name}</h1>
           <p className="max-w-[560px] text-[17px] leading-relaxed text-muted md:text-[20px]">
             {SITE.role}. {SITE.tagline}
           </p>
@@ -44,39 +47,39 @@ export default function HomePage() {
       </Tile>
 
       {/* Stats pair */}
-      <Tile cols={3} as="section" className="grid grid-cols-2 gap-3" ariaLabel="Key numbers">
+      <Tile cols={3} as="section" className="grid grid-cols-2 content-center gap-3" ariaLabel="Key numbers">
         <Stat value={STATS[0].value} label={STATS[0].label} size="sm" />
-        <Stat value={STATS[1].value} label={STATS[1].label} size="sm" />
+        <Stat value={teamLed.value} label={teamLed.label} size="sm" />
       </Tile>
 
       {/* Featured work */}
       <Tile cols={4} rows={2} href={`/work/${featured.slug}`} className="justify-between" ariaLabel={`Case study: ${featured.title}`}>
-        <div className="flex justify-between font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
+        <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
           <span>01 · {featured.tag}</span>
           <span>{featured.metrics[0].value}</span>
         </div>
         <div className="tile-art h-[140px] rounded-2xl border border-line-strong" style={{ background: featured.art }} aria-hidden />
         <div className="flex flex-col gap-2">
           <span className="text-[26px] font-bold leading-tight tracking-[-0.03em]">{featured.title}</span>
-          <span className="text-[15px] leading-snug text-muted">52 microservices. Redis caching took average latency from 1500 ms to 600 ms.</span>
+          <span className="text-[15px] leading-snug text-muted">{featured.short}. {featured.metrics[1].value} {featured.metrics[1].label}.</span>
         </div>
       </Tile>
 
       <Tile cols={4} rows={2} href={`/work/${second.slug}`} className="justify-between" ariaLabel={`Case study: ${second.title}`}>
-        <div className="flex justify-between font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
+        <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
           <span>02 · {second.tag}</span>
           <span>{second.metrics[1].value} tx</span>
         </div>
         <div className="tile-art h-[140px] rounded-2xl border border-line-strong" style={{ background: second.art }} aria-hidden />
         <div className="flex flex-col gap-2">
           <span className="text-[26px] font-bold leading-tight tracking-[-0.03em]">{second.title}</span>
-          <span className="text-[15px] leading-snug text-muted">{second.metrics[0].value} users. Wallet auth, gas-optimised contracts, page load down 75%.</span>
+          <span className="text-[15px] leading-snug text-muted">{second.metrics[0].value} users. Led a {second.team.split(" ")[0]}-person cross-functional team; page load down 75%.</span>
         </div>
       </Tile>
 
       <Tile cols={4} href={`/work/${third.slug}`} className="justify-between" ariaLabel={`Case study: ${third.title}`}>
         <Eyebrow tone="peach">03 · {third.tag}</Eyebrow>
-        <div className="flex items-baseline justify-between gap-3">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
           <span className="text-[22px] font-bold leading-tight tracking-[-0.03em]">{third.title}</span>
           <span className="shrink-0 text-[14px] text-peach">{third.metrics[1].value} clients</span>
         </div>
@@ -100,13 +103,13 @@ export default function HomePage() {
       <Tile cols={3} as="section" className="justify-between" ariaLabel="Mentoring">
         <Eyebrow tone="peach">Mentored</Eyebrow>
         <div className="flex items-baseline gap-2">
-          <span className="text-[36px] font-bold leading-none tracking-[-0.04em]">15+</span>
+          <span className="text-[36px] font-bold leading-none tracking-[-0.04em]">{mentored.value}</span>
           <span className="text-[13px] text-muted">engineers across US &amp; EU teams</span>
         </div>
       </Tile>
 
       {/* Contact */}
-      <Tile cols={4} tone="accent" href={`mailto:${SITE.email}`} className="justify-between" ariaLabel="Email Wasif">
+      <Tile cols={4} md={6} tone="accent" href={`mailto:${SITE.email}`} className="justify-between" ariaLabel="Email Wasif">
         <Eyebrow tone="bg">Let&apos;s talk</Eyebrow>
         <span className="text-[22px] font-bold leading-tight tracking-[-0.02em] break-all">{SITE.email}</span>
       </Tile>

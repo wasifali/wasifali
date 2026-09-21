@@ -4,31 +4,31 @@ import { EXPERIENCE, SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "Ten years across Ibanera, Big Immersive, CreativeMorph and Novatore Solutions.",
+  description: "Ten years across Ibanera, Big Immersive, CreativeMorph and Novatore Solutions, the last five leading teams of five to seven engineers.",
 };
 
 export default function ExperiencePage() {
   const [first, second, ...rest] = EXPERIENCE;
   return (
     <div className="bento">
-      <Tile cols={12} tone="hero" as="section" className="flex-row items-end justify-between gap-6 p-8 md:p-10">
+      <Tile cols={12} tone="hero" as="section" className="justify-between gap-6 p-6 sm:p-8 md:flex-row md:items-end md:p-10">
         <div className="flex flex-col gap-3">
           <Eyebrow>Experience · 2016 → 2026</Eyebrow>
-          <h1 className="text-[34px] font-bold leading-[1] tracking-[-0.035em] md:text-[44px]">Ten years, four teams.</h1>
+          <h1 className="text-[clamp(30px,6.5vw,44px)] font-bold leading-[1] tracking-[-0.035em]">Ten years, four teams, five of them leading.</h1>
         </div>
-        <a href={SITE.resumeUrl} className="shrink-0 rounded-full border border-accent/50 px-4 py-2.5 text-[14px] font-semibold text-peach hover:bg-coal">
+        <a href={SITE.resumeUrl} className="w-fit shrink-0 rounded-full border border-accent/50 px-4 py-2.5 text-[14px] font-semibold text-peach hover:bg-coal">
           Résumé PDF ↓
         </a>
       </Tile>
 
       {[first, second].map((r) => (
-        <Tile key={r.company} cols={6} rows={2} as="article" className="justify-between gap-4">
-          <div className="flex justify-between font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
+        <Tile key={r.company} cols={6} rows={2} md={6} mdRows={1} as="article" className="justify-between gap-4">
+          <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
             <span>{r.period}</span>
             <span>{r.mode}</span>
           </div>
           <div className="flex flex-col gap-2">
-            <h2 className="text-[26px] font-bold leading-tight tracking-[-0.03em] md:text-[30px]">{r.title}</h2>
+            <h2 className="text-[clamp(22px,4.5vw,30px)] font-bold leading-tight tracking-[-0.03em]">{r.title}</h2>
             {r.companyUrl ? (
               <a href={r.companyUrl} target="_blank" rel="noopener noreferrer" className="w-fit text-[16px] text-accent hover:text-peach">{r.company} ↗</a>
             ) : (
@@ -46,12 +46,12 @@ export default function ExperiencePage() {
       ))}
 
       {rest.map((r) => (
-        <Tile key={r.company} cols={6} as="article" className="justify-between gap-3">
-          <div className="flex justify-between font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
+        <Tile key={r.company} cols={6} md={6} as="article" className="justify-between gap-3">
+          <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
             <span>{r.period}</span>
             <span>{r.mode}</span>
           </div>
-          <div className="flex items-baseline justify-between gap-4">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <h2 className="text-[22px] font-bold leading-tight tracking-[-0.03em]">{r.title}</h2>
             <span className="shrink-0 text-[15px] text-accent">{r.company}</span>
           </div>

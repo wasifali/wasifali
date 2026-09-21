@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Eyebrow, Stat, Tile } from "@/components/tile";
-import { CASE_STUDIES } from "@/lib/content";
+import { CASE_STUDIES, STATS } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -11,18 +11,18 @@ export default function WorkPage() {
   const [a, b, c, d] = CASE_STUDIES;
   return (
     <div className="bento">
-      <Tile cols={8} tone="hero" as="section" className="justify-between p-8 md:p-10">
+      <Tile cols={8} tone="hero" as="section" className="justify-between p-6 sm:p-8 md:p-10">
         <Eyebrow>Work · {CASE_STUDIES.length} case studies</Eyebrow>
-        <h1 className="text-[34px] font-bold leading-[1] tracking-[-0.035em] md:text-[44px]">Systems that carried real traffic.</h1>
+        <h1 className="text-[clamp(30px,6.5vw,44px)] font-bold leading-[1] tracking-[-0.035em]">Systems that carried real traffic.</h1>
       </Tile>
-      <Tile cols={4} as="section" className="grid grid-cols-2 gap-3">
-        <Stat value="52" label="services led" size="sm" />
-        <Stat value="150K+" label="end users served" size="sm" />
+      <Tile cols={4} md={6} as="section" className="grid grid-cols-2 content-center gap-3">
+        <Stat value={STATS[1].value} label="services led" size="sm" />
+        <Stat value={STATS[2].value} label="engineers led" size="sm" />
       </Tile>
 
       {[a, b].map((cs, i) => (
         <Tile key={cs.slug} cols={6} rows={2} href={`/work/${cs.slug}`} className="justify-between" ariaLabel={`Read case study: ${cs.title}`}>
-          <div className="flex justify-between font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
+          <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
             <span>0{i + 1} · {cs.tag}</span>
             <span>{cs.period}</span>
           </div>
@@ -35,7 +35,7 @@ export default function WorkPage() {
       ))}
 
       {[c, d].map((cs, i) => (
-        <Tile key={cs.slug} cols={6} href={`/work/${cs.slug}`} className="flex-row items-center justify-between gap-6" ariaLabel={`Read case study: ${cs.title}`}>
+        <Tile key={cs.slug} cols={6} href={`/work/${cs.slug}`} className="justify-between gap-4 lg:flex-row lg:items-center lg:gap-6" ariaLabel={`Read case study: ${cs.title}`}>
           <div className="flex flex-col gap-1.5">
             <Eyebrow tone="peach">0{i + 3} · {cs.tag}</Eyebrow>
             <span className="text-[24px] font-bold leading-tight tracking-[-0.03em]">{cs.title}</span>

@@ -5,13 +5,13 @@ import { CERTIFICATIONS, EDUCATION, PRINCIPLES, SITE, STACK } from "@/lib/conten
 
 export const metadata: Metadata = {
   title: "About",
-  description: "I make backends predictable and teams faster. Ten years of production Node.js and TypeScript.",
+  description: "Ten years in software, the last five running teams. Engineering leader and architect across Node.js, TypeScript, Go and React.",
 };
 
 export default function AboutPage() {
   return (
     <div className="bento">
-      <Tile cols={4} rows={3} className="tile-portrait overflow-hidden p-0" ariaLabel="Portrait of Wasif Ali">
+      <Tile cols={4} rows={3} md={6} mdRows={1} className="tile-portrait-wide overflow-hidden p-0" ariaLabel="Portrait of Wasif Ali">
         <Image src="/portrait.jpg" alt={`${SITE.name}, portrait`} fill priority sizes="(max-width: 1024px) 100vw, 400px" className="object-cover object-top" />
         <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(10,10,10,0.8),transparent_50%)]" aria-hidden />
         <div className="absolute bottom-6 left-6 flex flex-col gap-1">
@@ -20,12 +20,12 @@ export default function AboutPage() {
         </div>
       </Tile>
 
-      <Tile cols={8} rows={2} tone="hero" as="section" className="justify-between p-8 md:p-10">
+      <Tile cols={8} rows={2} md={6} mdRows={1} tone="hero" as="section" className="justify-between gap-6 p-6 sm:p-8 md:p-10">
         <Eyebrow>About</Eyebrow>
         <div className="flex flex-col gap-4">
-          <h1 className="text-[34px] font-bold leading-[1] tracking-[-0.035em] md:text-[44px]">I make backends predictable and teams faster.</h1>
+          <h1 className="text-[clamp(30px,6.5vw,44px)] font-bold leading-[1] tracking-[-0.035em]">I run teams that ship, and still write the code.</h1>
           <p className="text-[16px] leading-relaxed text-muted md:text-[17px]">
-            Ten years of production Node.js and TypeScript. Backend lead for a 52-service ERP estate serving two BMW marques, a consumer marketplace past a million transactions, and the NestJS reference architecture an agency reused across twenty client projects. The pattern in my work is the un-glamorous middle: caching that survives cold starts, service boundaries that hold under dealer-hours traffic, and review programs that measurably cut defects.
+            Ten years in software, the last five running teams. I led a 7-person cross-functional group, frontend, backend, blockchain and QA, that owned architecture, delivery and code quality for a marketplace past a million transactions, and the 5-person backend group behind a 52-service ERP estate serving two BMW marques at 200K requests a day. Most recently sixteen months on contract building Go and React services. I have mentored 15+ engineers and set the code review and QA standards my teams run on. I am comfortable being the person accountable for both the technical call and the ship date.
           </p>
         </div>
       </Tile>
@@ -38,6 +38,7 @@ export default function AboutPage() {
       <Tile cols={4} as="section" className="justify-between">
         <Eyebrow tone="peach">Certified</Eyebrow>
         <span className="text-[16px] font-semibold leading-snug">{CERTIFICATIONS.map((c) => c.title.split(":")[0]).join(" · ")} · {CERTIFICATIONS[0].issuer}</span>
+        <span className="text-[13px] leading-snug text-muted">{CERTIFICATIONS.map((c) => c.title).join(" · ")}</span>
       </Tile>
 
       {PRINCIPLES.map((p, i) => (
@@ -55,9 +56,9 @@ export default function AboutPage() {
         <Eyebrow>Shipped in production</Eyebrow>
         <Pills items={STACK.shipped} />
       </Tile>
-      <Tile cols={4} as="section" className="gap-3">
-        <Eyebrow>Working knowledge</Eyebrow>
-        <Pills items={STACK.working} />
+      <Tile cols={4} md={6} as="section" className="gap-3">
+        <Eyebrow>Leadership &amp; delivery</Eyebrow>
+        <Pills items={STACK.leadership} />
       </Tile>
     </div>
   );
