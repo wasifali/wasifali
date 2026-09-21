@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Art } from "@/components/art";
 import { Dot, Eyebrow, Pills, Stat, Tile } from "@/components/tile";
 import { CASE_STUDIES, EXPERIENCE, SITE, STACK, STATS } from "@/lib/content";
 
@@ -58,7 +59,7 @@ export default function HomePage() {
           <span>01 · {featured.tag}</span>
           <span>{featured.metrics[0].value}</span>
         </div>
-        <div className="tile-art h-[140px] rounded-2xl border border-line-strong" style={{ background: featured.art }} aria-hidden />
+        <Art cs={featured} priority sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 400px" />
         <div className="flex flex-col gap-2">
           <span className="text-[26px] font-bold leading-tight tracking-[-0.03em]">{featured.title}</span>
           <span className="text-[15px] leading-snug text-muted">{featured.short}. {featured.metrics[1].value} {featured.metrics[1].label}.</span>
@@ -70,7 +71,7 @@ export default function HomePage() {
           <span>02 · {second.tag}</span>
           <span>{second.metrics[1].value} tx</span>
         </div>
-        <div className="tile-art h-[140px] rounded-2xl border border-line-strong" style={{ background: second.art }} aria-hidden />
+        <Art cs={second} sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 400px" />
         <div className="flex flex-col gap-2">
           <span className="text-[26px] font-bold leading-tight tracking-[-0.03em]">{second.title}</span>
           <span className="text-[15px] leading-snug text-muted">{second.metrics[0].value} users. Led a {second.team.split(" ")[0]}-person cross-functional team; page load down 75%.</span>

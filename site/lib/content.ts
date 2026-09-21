@@ -92,8 +92,9 @@ export interface CaseStudy {
   built: string[];
   broke: string;
   results: string;
-  /** CSS gradient used as the card art until a real screenshot is added to /public/work */
+  /** CSS gradient behind the artwork; also the fallback when `image` is absent */
   art: string;
+  /** Themed SVG illustration in /public/work, 1600×600 (8:3) */
   image?: string;
   live?: string;
 }
@@ -129,6 +130,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "The first cache design invalidated by entity, which meant a single dealer update fanned out into hundreds of evictions during peak hours and briefly made latency worse. Moving to versioned keys with request coalescing fixed the stampede and is the pattern I now reach for first.",
     results:
       "Sustained throughput across a service estate serving two global marques, 200K requests a day, with average response time down from 1500 ms to 600 ms and post-release defects down 70% after the review program.",
+    image: "/work/bmw-erp.svg",
     art: "linear-gradient(150deg, #7C2D12, #1a0a05)",
   },
   {
@@ -161,6 +163,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Wallet sessions did not survive network switches, so a user who changed chains mid-checkout lost their cart. A session layer keyed on account plus chain, with explicit chain guards before signing, removed the whole class of support tickets.",
     results:
       "50K+ users and over a million transactions processed by a team that shipped as one unit, with gas-optimised contracts and wallet flows reused across 15+ applications.",
+    image: "/work/marketplace.svg",
     art: "linear-gradient(150deg, #C2410C, #1a0a05)",
   },
   {
@@ -193,6 +196,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "OCR confidence scores were trusted too early, so low-quality scans flowed straight to clients. A review threshold with a human-in-the-loop queue fixed quality without slowing the happy path.",
     results:
       "1000+ images a month for 100+ clients, 10K+ end users on the dashboards, and 10+ hours a week returned to operations.",
+    image: "/work/ocr-platform.svg",
     art: "linear-gradient(150deg, #F97316, #431407)",
   },
   {
@@ -224,6 +228,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "The first WebSocket layer re-broadcast full schedules on every change and fell over on Monday mornings. Delta updates and per-client subscriptions brought it back under control.",
     results:
       "100K+ users served, deployment time cut from hours to minutes, and a team trained to keep it that way.",
+    image: "/work/fitness-cms.svg",
     art: "linear-gradient(150deg, #FDBA74, #7C2D12)",
   },
 ];

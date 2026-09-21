@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { Art } from "@/components/art";
 import { Eyebrow, Pills, Stat, Tile } from "@/components/tile";
 import { CASE_STUDIES } from "@/lib/content";
 
@@ -62,10 +63,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
           </dl>
         </Tile>
 
-        <Tile cols={12} rows={2} mdRows={1} className="items-center justify-center p-0" style={{ background: cs.art }} ariaLabel="Architecture illustration">
-          <span className="font-mono text-[12px] tracking-[0.18em] text-peach uppercase">
-            Architecture diagram · coming soon
-          </span>
+        <Tile cols={12} as="section" className="overflow-hidden p-0" ariaLabel="Architecture illustration">
+          <Art cs={cs} alt={`Architecture illustration for ${cs.title}`} priority sizes="(max-width: 1279px) 100vw, 1216px" className="rounded-tile border-0" />
         </Tile>
 
         {cs.metrics.map((m) => (

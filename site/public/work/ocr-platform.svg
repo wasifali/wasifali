@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" role="img" aria-label="Architecture: scanned images pass through OCR with a human review queue into client dashboards and cross-tool webhooks">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a0d07"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+    <radialGradient id="glow" cx="0.28" cy="0.5" r="0.55"><stop offset="0" stop-color="#F97316" stop-opacity="0.24"/><stop offset="1" stop-color="#F97316" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" fill="#FDBA74" fill-opacity="0.08"/></pattern>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F97316" stop-opacity="0"/><stop offset="0.5" stop-color="#F97316" stop-opacity="0.35"/><stop offset="1" stop-color="#F97316" stop-opacity="0"/></linearGradient>
+    <clipPath id="doc"><rect x="110" y="110" width="340" height="380" rx="20"/></clipPath>
+    <style>
+      .mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;font-size:13px;font-weight:600}
+      .flow{stroke-dasharray:6 10;animation:dash 3s linear infinite}
+      @keyframes dash{to{stroke-dashoffset:-64}}
+      .scanline{animation:scan 4s ease-in-out infinite}
+      @keyframes scan{0%,100%{transform:translateY(-40px)}50%{transform:translateY(300px)}}
+      @media (max-width:899px){.mono{display:none}}
+      @media (prefers-reduced-motion:reduce){.flow,.scanline{animation:none}}
+    </style>
+  </defs>
+  <rect width="1600" height="600" fill="url(#bg)"/>
+  <rect width="1600" height="600" fill="url(#dots)"/>
+  <rect width="1600" height="600" fill="url(#glow)"/>
+
+  <!-- scanned document with bounding boxes -->
+  <g>
+    <rect x="110" y="110" width="340" height="380" rx="20" fill="#121212" stroke="#3a1d10" stroke-width="2"/>
+    <g fill="#3a1d10">
+      <rect x="140" y="150" width="200" height="12" rx="6"/><rect x="140" y="176" width="260" height="10" rx="5"/><rect x="140" y="198" width="230" height="10" rx="5"/>
+      <rect x="140" y="240" width="120" height="10" rx="5"/><rect x="270" y="240" width="130" height="10" rx="5"/>
+      <rect x="140" y="264" width="260" height="10" rx="5"/><rect x="140" y="286" width="180" height="10" rx="5"/>
+      <rect x="140" y="330" width="260" height="10" rx="5"/><rect x="140" y="352" width="210" height="10" rx="5"/><rect x="140" y="374" width="240" height="10" rx="5"/>
+      <rect x="140" y="416" width="160" height="10" rx="5"/><rect x="140" y="438" width="220" height="10" rx="5"/>
+    </g>
+    <!-- detected regions -->
+    <g fill="none" stroke-width="2">
+      <rect x="130" y="140" width="220" height="32" rx="6" stroke="#F97316"/>
+      <rect x="130" y="230" width="140" height="30" rx="6" stroke="#FDBA74"/>
+      <rect x="260" y="230" width="150" height="30" rx="6" stroke="#F97316"/>
+      <rect x="130" y="320" width="280" height="74" rx="6" stroke="#C2410C"/>
+      <rect x="130" y="406" width="180" height="52" rx="6" stroke="#FDBA74" stroke-dasharray="4 6"/>
+    </g>
+    <!-- confidence tags -->
+    <g class="mono" font-size="10">
+      <rect x="292" y="130" width="60" height="18" rx="9" fill="#F97316"/><text x="322" y="143" fill="#0a0a0a" text-anchor="middle">0.98</text>
+      <rect x="352" y="310" width="60" height="18" rx="9" fill="#C2410C"/><text x="382" y="323" fill="#0a0a0a" text-anchor="middle">0.71</text>
+    </g>
+    <g clip-path="url(#doc)"><rect x="110" y="110" width="340" height="60" fill="url(#scan)" class="scanline"/></g>
+  </g>
+  <text x="280" y="530" class="mono" fill="#a3a3a3" text-anchor="middle" font-size="12">1000+ images / month</text>
+
+  <!-- pipeline -->
+  <path d="M450 300 H 540" fill="none" stroke="#C2410C" stroke-width="2"/>
+  <path d="M450 300 H 540" fill="none" stroke="#F97316" stroke-width="2" class="flow"/>
+  <g class="mono" font-size="12">
+    <rect x="540" y="262" width="130" height="76" rx="20" fill="#2c1208" stroke="#F97316" stroke-width="2"/><text x="605" y="305" fill="#FDBA74" text-anchor="middle">OCR</text>
+    <path d="M670 300 H 720" fill="none" stroke="#C2410C" stroke-width="2"/>
+    <rect x="720" y="262" width="150" height="76" rx="20" fill="#121212" stroke="#C2410C" stroke-width="2"/><text x="795" y="305" fill="#FDBA74" text-anchor="middle">Review</text>
+    <!-- human-in-the-loop branch -->
+    <path d="M795 338 V 400" fill="none" stroke="#7C2D12" stroke-width="2" stroke-dasharray="4 6"/>
+    <circle cx="795" cy="418" r="14" fill="#121212" stroke="#7C2D12" stroke-width="2"/><circle cx="795" cy="413" r="4" fill="#FDBA74"/><path d="M786 428 a9 6 0 0 1 18 0" fill="#FDBA74"/>
+    <text x="795" y="462" fill="#737373" text-anchor="middle" font-size="10">low confidence</text>
+    <path d="M870 300 H 920" fill="none" stroke="#C2410C" stroke-width="2"/>
+    <rect x="920" y="262" width="150" height="76" rx="20" fill="#121212" stroke="#3a1d10" stroke-width="2"/><text x="995" y="305" fill="#FDBA74" text-anchor="middle">Deliver</text>
+  </g>
+  <path d="M1070 300 H 1150" fill="none" stroke="#C2410C" stroke-width="2"/>
+  <path d="M1070 300 H 1150" fill="none" stroke="#F97316" stroke-width="2" class="flow"/>
+
+  <!-- dashboard -->
+  <g>
+    <rect x="1150" y="130" width="360" height="250" rx="24" fill="#121212" stroke="#3a1d10" stroke-width="2"/>
+    <rect x="1178" y="160" width="120" height="10" rx="5" fill="#F97316"/>
+    <rect x="1178" y="182" width="80" height="8" rx="4" fill="#3a1d10"/>
+    <!-- bars -->
+    <g fill="#7C2D12">
+      <rect x="1178" y="300" width="28" height="50" rx="6"/><rect x="1218" y="270" width="28" height="80" rx="6" fill="#C2410C"/><rect x="1258" y="286" width="28" height="64" rx="6"/><rect x="1298" y="240" width="28" height="110" rx="6" fill="#F97316"/><rect x="1338" y="262" width="28" height="88" rx="6" fill="#C2410C"/><rect x="1378" y="226" width="28" height="124" rx="6" fill="#FDBA74"/><rect x="1418" y="252" width="28" height="98" rx="6" fill="#C2410C"/><rect x="1458" y="212" width="28" height="138" rx="6" fill="#F97316"/>
+    </g>
+    <line x1="1178" y1="350" x2="1486" y2="350" stroke="#2a1a12" stroke-width="2"/>
+  </g>
+  <!-- webhooks -->
+  <g class="mono" fill="#FDBA74" font-size="11">
+    <rect x="1150" y="410" width="80" height="34" rx="17" fill="#2c1208" stroke="#3a1d10"/><text x="1190" y="432" text-anchor="middle">Slack</text>
+    <rect x="1240" y="410" width="86" height="34" rx="17" fill="#2c1208" stroke="#3a1d10"/><text x="1283" y="432" text-anchor="middle">Trello</text>
+    <rect x="1336" y="410" width="74" height="34" rx="17" fill="#2c1208" stroke="#3a1d10"/><text x="1373" y="432" text-anchor="middle">JIRA</text>
+    <rect x="1420" y="410" width="90" height="34" rx="17" fill="#2c1208" stroke="#3a1d10"/><text x="1465" y="432" text-anchor="middle">GitHub</text>
+  </g>
+  <text x="1330" y="500" class="mono" fill="#a3a3a3" text-anchor="middle" font-size="12">100+ client teams · 10+ h / week saved</text>
+</svg>

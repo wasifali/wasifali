@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Art } from "@/components/art";
 import { Eyebrow, Stat, Tile } from "@/components/tile";
 import { CASE_STUDIES, STATS } from "@/lib/content";
 
@@ -26,7 +27,7 @@ export default function WorkPage() {
             <span>0{i + 1} · {cs.tag}</span>
             <span>{cs.period}</span>
           </div>
-          <div className="tile-art h-[150px] rounded-2xl border border-line-strong" style={{ background: cs.art }} aria-hidden />
+          <Art cs={cs} priority={i === 0} sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 600px" />
           <div className="flex flex-col gap-2">
             <span className="text-[28px] font-bold leading-tight tracking-[-0.03em]">{cs.title}</span>
             <span className="text-[15px] leading-snug text-muted">{cs.summary}</span>

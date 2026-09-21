@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" role="img" aria-label="Architecture: a CMS schedule panel, a live WebSocket pulse, payment rails, and a Jenkins to AWS deploy pipeline">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a0d07"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.6"><stop offset="0" stop-color="#FDBA74" stop-opacity="0.18"/><stop offset="1" stop-color="#FDBA74" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" fill="#FDBA74" fill-opacity="0.08"/></pattern>
+    <filter id="soft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <style>
+      .mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;font-size:13px;font-weight:600}
+      .flow{stroke-dasharray:6 10;animation:dash 3s linear infinite}
+      @keyframes dash{to{stroke-dashoffset:-64}}
+      .beat{stroke-dasharray:900;stroke-dashoffset:900;animation:beat 3.2s linear infinite}
+      @keyframes beat{to{stroke-dashoffset:0}}
+      @media (max-width:899px){.mono{display:none}}
+      @media (prefers-reduced-motion:reduce){.flow,.beat{animation:none;stroke-dashoffset:0}}
+    </style>
+  </defs>
+  <rect width="1600" height="600" fill="url(#bg)"/>
+  <rect width="1600" height="600" fill="url(#dots)"/>
+  <rect width="1600" height="600" fill="url(#glow)"/>
+
+  <!-- CMS schedule panel -->
+  <g>
+    <rect x="90" y="110" width="400" height="380" rx="26" fill="#121212" stroke="#3a1d10" stroke-width="2"/>
+    <rect x="118" y="140" width="140" height="12" rx="6" fill="#F97316"/>
+    <rect x="118" y="164" width="90" height="8" rx="4" fill="#3a1d10"/>
+    <!-- rows: time · class · seats -->
+    <g>
+      <rect x="118" y="200" width="344" height="52" rx="14" fill="#161616"/><rect x="134" y="220" width="48" height="10" rx="5" fill="#FDBA74"/><rect x="200" y="220" width="130" height="10" rx="5" fill="#3a1d10"/><rect x="400" y="216" width="46" height="18" rx="9" fill="#2c1208"/>
+      <rect x="118" y="262" width="344" height="52" rx="14" fill="#2c1208" stroke="#C2410C"/><rect x="134" y="282" width="48" height="10" rx="5" fill="#FDBA74"/><rect x="200" y="282" width="160" height="10" rx="5" fill="#7C2D12"/><rect x="400" y="278" width="46" height="18" rx="9" fill="#F97316"/>
+      <rect x="118" y="324" width="344" height="52" rx="14" fill="#161616"/><rect x="134" y="344" width="48" height="10" rx="5" fill="#FDBA74"/><rect x="200" y="344" width="110" height="10" rx="5" fill="#3a1d10"/><rect x="400" y="340" width="46" height="18" rx="9" fill="#2c1208"/>
+      <rect x="118" y="386" width="344" height="52" rx="14" fill="#161616"/><rect x="134" y="406" width="48" height="10" rx="5" fill="#FDBA74"/><rect x="200" y="406" width="140" height="10" rx="5" fill="#3a1d10"/><rect x="400" y="402" width="46" height="18" rx="9" fill="#2c1208"/>
+    </g>
+    <text x="290" y="470" class="mono" fill="#737373" text-anchor="middle" font-size="11">Live schedule · delta updates</text>
+  </g>
+  <text x="290" y="530" class="mono" fill="#a3a3a3" text-anchor="middle" font-size="12">Angular CMS · 100K+ users</text>
+
+  <!-- websocket pulse -->
+  <path d="M490 300 H 560 L 590 300 L 610 240 L 640 360 L 670 300 H 720 L 750 300 L 770 250 L 800 350 L 830 300 H 900 L 930 300 L 950 262 L 980 338 L 1010 300 H 1090" fill="none" stroke="#F97316" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.35" filter="url(#soft)"/>
+  <path d="M490 300 H 560 L 590 300 L 610 240 L 640 360 L 670 300 H 720 L 750 300 L 770 250 L 800 350 L 830 300 H 900 L 930 300 L 950 262 L 980 338 L 1010 300 H 1090" fill="none" stroke="#2a1a12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M490 300 H 560 L 590 300 L 610 240 L 640 360 L 670 300 H 720 L 750 300 L 770 250 L 800 350 L 830 300 H 900 L 930 300 L 950 262 L 980 338 L 1010 300 H 1090" fill="none" stroke="#FDBA74" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="beat"/>
+  <text x="790" y="410" class="mono" fill="#a3a3a3" text-anchor="middle" font-size="12">WebSockets · real-time</text>
+
+  <!-- payment card -->
+  <g>
+    <rect x="1120" y="120" width="390" height="200" rx="26" fill="#2c1208" stroke="#C2410C" stroke-width="2"/>
+    <rect x="1120" y="180" width="390" height="40" fill="#7C2D12"/>
+    <rect x="1150" y="150" width="56" height="18" rx="6" fill="#FDBA74"/>
+    <g fill="#FDBA74"><rect x="1150" y="250" width="60" height="10" rx="5"/><rect x="1226" y="250" width="60" height="10" rx="5"/><rect x="1302" y="250" width="60" height="10" rx="5"/><rect x="1378" y="250" width="60" height="10" rx="5"/></g>
+    <rect x="1150" y="280" width="120" height="8" rx="4" fill="#C2410C"/>
+    <circle cx="1450" cy="272" r="18" fill="#F97316" fill-opacity="0.9"/><circle cx="1424" cy="272" r="18" fill="#FDBA74" fill-opacity="0.9"/>
+  </g>
+  <text x="1315" y="352" class="mono" fill="#a3a3a3" text-anchor="middle" font-size="12">Payment gateways</text>
+
+  <!-- deploy pipeline -->
+  <g class="mono" font-size="12">
+    <rect x="1120" y="400" width="120" height="56" rx="18" fill="#121212" stroke="#3a1d10" stroke-width="2"/><text x="1180" y="433" fill="#FDBA74" text-anchor="middle">Git</text>
+    <path d="M1240 428 H 1270" fill="none" stroke="#C2410C" stroke-width="2"/><path d="M1240 428 H 1270" fill="none" stroke="#F97316" stroke-width="2" class="flow"/>
+    <rect x="1270" y="400" width="120" height="56" rx="18" fill="#121212" stroke="#C2410C" stroke-width="2"/><text x="1330" y="433" fill="#FDBA74" text-anchor="middle">Jenkins</text>
+    <path d="M1390 428 H 1420" fill="none" stroke="#C2410C" stroke-width="2"/><path d="M1390 428 H 1420" fill="none" stroke="#F97316" stroke-width="2" class="flow"/>
+    <rect x="1420" y="400" width="90" height="56" rx="18" fill="#F97316"/><text x="1465" y="433" fill="#0a0a0a" text-anchor="middle">AWS</text>
+  </g>
+  <text x="1315" y="500" class="mono" fill="#a3a3a3" text-anchor="middle" font-size="12">Deploys: hours → minutes</text>
+</svg>
